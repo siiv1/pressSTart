@@ -9,6 +9,7 @@ body, html {
     This code controls your "hero image." You will need to change hero.jpg to match your asset */
     background-image:url("page1.png");
     height: 100%;
+    overflow: scroll;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
