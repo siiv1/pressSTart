@@ -1,24 +1,21 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Garamond, serif, Georgia, 'Times New Roman', Times, serif, monospace;
 }
 
-.hero-image {
-    /* - HERO -
-    This code controls your "hero image." You will need to change hero.jpg to match your asset */
+.begin-image {
+    /* PAGE 1 IMAGE */
     background-image:url("page1.png");
     height: 100%;
-    overflow: scroll;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 .option-image {
-    /* - HERO -
-    This code controls your "hero image." You will need to change hero.jpg to match your asset */
+    /* CHOICE 1 IMAGE */
     background-image:url("page2Choice.png");
     height: 100%;
     background-attachment: fixed;
@@ -28,9 +25,30 @@ body, html {
     position: relative;
 }
 .leftPath-image {
-    /* - HERO -
-    This code controls your "hero image." You will need to change hero.jpg to match your asset */
+    /* LEFT PATH IMAGE */
     background-image:url("option1Fght.png");
+    height: 100%;
+    overflow: scroll;
+    background-attachment: scroll;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.rightPath-image {
+    /* RIGHT PATH 1 IMAGE */
+    background-image:url("option2Run.png");
+    height: 100%;
+    overflow: scroll;
+    background-attachment: scroll;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.rightEnd-image {
+    /* ENDING 1 IMAGE */
+    background-image:url("ending1Run.png");
     height: 100%;
     overflow: scroll;
     background-attachment: scroll;
@@ -42,10 +60,11 @@ body, html {
 
 /* Places text in the middle of the image */
 .hero-text {
+    padding-bottom: 100px;
     text-align: left;
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 250%;
@@ -55,7 +74,7 @@ body, html {
     text-align: left;
     position: absolute;
     top: 95%;
-    left: 115%;
+    left: 125%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 100%;
@@ -70,13 +89,15 @@ body, html {
     font-size: 100%;
 }
 .hero-text4 {
+    display: block;
+    margin: 5%;
     text-align: left;
-    position: relative;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    padding-bottom: 10%;
+    top: 20%;
+    transform: translate(-45%, -50%);
     color: rgba(253, 246, 246, 0.856);
-    font-size: 100%;
+    font-size: 75%;
 }
 
 .hero-text h2 {
@@ -112,21 +133,22 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 5px;
+    padding-right: 100px;
     border: 0px solid #;
 }
 .buttonbox2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 5px;
     border: 0px solid #;
 }
 .button {
     background-color: #40134297;
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: rgb(181, 217, 231);
+    padding: 5px 25px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
@@ -134,45 +156,8 @@ body, html {
 }
 
 .button:hover {
-    background-color: #4682B4;
+    background-color: #27f1ff56;
 }
-
-/* Change unordered list from disc (default) to circle, square, or none. */
-.ul {
-    list-style-type: disc;
-    font-size: 20pt;
-    padding: 20px;
-}
-
-/* Change orderd list from upper-roman to lower-alpha. */
-.ol {
-    list-style-type: upper-roman;
-    font-size: 20pt;
-    padding: 20px;
-}
-
-/* Learn other list conventions: https://www.w3schools.com/cssref/pr_list-style-type.asp */
-
-.video {
-    text-align: center;
-}
-
-.video-container {
-  	position:relative;
-  	padding-bottom:56.25%;
-  	padding-top:30px;
-  	height:0;
-  	overflow:hidden;
-    text-align: center;
-  }
-
-.video-container iframe, .video-container object, .video-container embed {
-  	position:absolute;
-  	top:0;
-  	left:0;
-  	width:100%;
-  	height:100%;
-  }
 
 
 /* Preset Image Controls
@@ -199,27 +184,58 @@ This code controls that cool parallax image and scrolling effect. Change the ima
 
 
 .parallax {
-    background-image: url("parallax.jpg");
+    background-image: url("page1.png");
 
     /* Set a specific height */
-    height: 500px;
+    height: 100%;
 
     /* control the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    
 
 }
-
+.parallax-container {
+    /*  this is where the magic happens:  */
+    background-image: url("page1.png");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    background-color: #0e071c;
+    /* dimensions are important, ensure it is tall enough to scroll */ 
+    min-height: 120vh;
+    /* you are free to lay out the container items with flexbox or whatever means you wish */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .parallax-container2 {
+    /*  this is where the magic happens:  */
+    background-image: url("page1.png");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    background-color: #0e071c;
+    /* dimensions are important, ensure it is tall enough to scroll */ 
+    min-height: 120vh;
+    max-width: 200vw;
+    /* you are free to lay out the container items with flexbox or whatever means you wish */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
 /* This code stops the parallax image and scrolling effect for small screens--at the moment, iPhones just don't it.*/
 @media screen and (max-width: 768px) {
 	.parallax {
 		background-attachment: inherit;
-    height: 100px;
+    height: 100%;
 	}
 }
 
@@ -228,74 +244,4 @@ This code controls that cool parallax image and scrolling effect. Change the ima
 
 The following CSS is responsible for your photo grid .row, .column, .column img and @ media all work together to create your responsive image displays. Change the images on index.html.*/
 
-.photogrid {
-   text-align: center;
-   padding-top: 100px;
-   padding-bottom: 100px;
-}
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    justify-content: center;
-}
-
-/* Create 3 equal columns that sit next to each other */
-.column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-
-/* Responsive layout - makes grid a one column-layout instead of two or three columns */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 75%;
-        max-width: 75%;
-    }
-}
-/* - Preset Text Block Controls-
-this CSS element centers text elements*/
-
-
-/* This CSS section controls the paragraph, video blocks*/
-@media screen and (min-width: 800px) {
-    .textblock, .video {
-        margin: auto;
-        width: 50%;
-        padding: 100px;
-        font-size: 125%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .textblock, .video {
-        margin: auto;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 100px;
-        padding-bottom: : 1000px;
-    }
-}
-
-
-#logo {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 12pt;
-    text-align: center;
-  }
-
-#footer {
-        text-align: center;
-    }
